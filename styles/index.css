@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  font-family: "Red Hat Text", sans-serif;
+  text-align: center;
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #211d2b;
+  color: white;
+  background-image: url("../images/bg-stars.svg");
+  font-size: 14px;
+}
+
+.container {
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-content: space-around;
+}
+
+.container__title {
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: 4.5px;
+}
+
+.container__timer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: x-large;
+}
+
+.container__timer__frag {
+  margin: 20px;
+}
+
+.container__timer__frag__count {
+  position: relative;
+  padding: 30px;
+  aspect-ratio: 1/1;
+  background: #343650;
+  color: #fb6087;
+  font-size: -webkit-xxx-large;
+  border-radius: 10px;
+  font-weight: 800;
+}
+
+.container__timer__frag__count::before, .container__timer__frag__count::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 50%;
+  width: 100%;
+  background: #26213140;
+}
+
+.container__timer__frag__count::after {
+  top: 50%;
+  background: #ffffff05;
+}
+
+.container__timer__frag__count span {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #1e1f29;
+}
+
+.container__timer__frag__count span::before, .container__timer__frag__count span::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  height: 10px;
+  width: 10px;
+  background: #211d2b;
+  border-radius: 100%;
+}
+
+.container__timer__frag__count span::after {
+  left: unset;
+  right: -5px;
+}
+
+.container__timer__frag__title {
+  font-size: medium;
+  margin: 15px;
+  letter-spacing: 3px;
+  color: #8486a9;
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: 2.5px;
+}
+
+.container__links a {
+  margin: 0 10px;
+}
+
+.container__links a:hover svg path {
+  fill: #fb6087;
+}
+
+.container__links a svg path {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  z-index: -9;
+}
+/*# sourceMappingURL=index.css.map */

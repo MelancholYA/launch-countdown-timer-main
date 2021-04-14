@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400&display=swap");
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+body {
+  font-family: "Red Hat Text", sans-serif;
+  text-align: center;
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #211d2b;
+  color: white;
+  background-image: url("../images/bg-stars.svg");
+  font-size: 14px;
+}
+.container {
+  height: 100%;
+  display: grid;
+  place-content: space-around;
+  &__title {
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 4.5px;
+  }
+  &__timer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: x-large;
+    &__frag {
+      margin: 20px;
+      &__count {
+        position: relative;
+        padding: 30px;
+        aspect-ratio: 1/1;
+        background: hsl(236, 21%, 26%);
+        color: hsl(345, 95%, 68%);
+        font-size: -webkit-xxx-large;
+        border-radius: 10px;
+        font-weight: 800;
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          height: 50%;
+          width: 100%;
+          background: #26213140;
+        }
+        &::after {
+          top: 50%;
+          background: #ffffff05;
+        }
+        span {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          right: 0;
+          height: 1px;
+          background: hsl(235, 16%, 14%);
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            height: 10px;
+            width: 10px;
+            background: #211d2b;
+            border-radius: 100%;
+          }
+          &::after {
+            left: unset;
+            right: -5px;
+          }
+        }
+      }
+      &__title {
+        font-size: medium;
+        margin: 15px;
+        letter-spacing: 3px;
+        color: hsl(237, 18%, 59%);
+        text-transform: uppercase;
+        font-weight: 100;
+        letter-spacing: 2.5px;
+      }
+    }
+  }
+  &__links {
+    a {
+      margin: 0 10px;
+      &:hover {
+        svg {
+          path {
+            fill: hsl(345, 95%, 68%);
+          }
+        }
+      }
+      svg {
+        path {
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+}
+.bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  z-index: -9;
+}
